@@ -11,6 +11,8 @@ const projects = [
     tech: ['HTML', 'CSS', 'JavaScript', 'React'],
     color: '#2C3E2D',
     year: '2025',
+    link: 'https://gemasupaint.co.ke/',
+
   },
   {
     id: 2,
@@ -84,6 +86,11 @@ export default function Work() {
             >
               <div className="project-num">{p.num}</div>
               <div className="project-info">
+                {p.link && (
+               <a href={p.link} className="project-link-text" target="_blank" rel="noopener noreferrer">
+               View Project →
+               </a>
+              )}
                 <div className="project-meta">
                   <span className="label">{p.category}</span>
                   <span className="project-year">{p.year}</span>
