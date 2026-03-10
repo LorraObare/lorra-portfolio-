@@ -49,21 +49,17 @@ export default function About() {
             Digital builder.
           </h2>
           <p className="about__text reveal d2">
-            I hold a Diploma in Information Technology with a Distinction, and I've deepened
-            my skills through ALX Africa's certification programmes. My foundation spans
+            My foundation spans
             frontend development, digital operations, and system management areas where
             I've had real, hands-on impact.
           </p>
           <p className="about__text reveal d3">
-            I learn new tools quickly, communicate clearly, and bring genuine care to every
-            project. Whether I'm refining a website's user experience, improving a document
-            management workflow, or supporting learners through feedback, I show up with
-            curiosity, precision, and a drive to make things work better.
+            I am driven by a deep belief that technology is ultimately about people how systems empower them, how knowledge equips them, and how access creates opportunity.I am currently building my career at the intersection of software development, systems thinking, and digital empowerment
           </p>
 
           <div className="about__facts reveal d4">
             {[
-              { icon: '', label: 'Education', val: 'Information Technology — Distinction' },
+              { icon: '', label: 'Education', val: 'Information Technology' },
               { icon: '', label: 'Location', val: 'Nairobi, Kenya' },
               { icon: '', label: 'Focus', val: 'Frontend Dev · Digital Ops · Systems' },
               

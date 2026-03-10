@@ -5,9 +5,9 @@ const projects = [
   {
     id: 1,
     num: '01',
-    title: 'Gemasu — Website Case Study',
+    title: 'Gemasu Paint— Website Case Study',
     category: 'Frontend Development',
-    desc: 'A full website built from concept to deployment. Starting with wireframes and user flows, I developed Gemasu using HTML, CSS, JavaScript, and React — with a focus on usability, responsiveness, and content clarity. The project taught me how to manage the complete build process: from planning architecture and choosing components, to testing across devices and refining the user experience based on feedback.',
+    desc: 'A full website built from concept to deployment.The project taught me how to manage the complete build process: from planning architecture and choosing components, to testing across devices and refining the user experience based on feedback.',
     tech: ['HTML', 'CSS', 'JavaScript', 'React'],
     color: '#2C3E2D',
     year: '2025',
