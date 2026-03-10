@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import '../styles/About.css';
+import '../Styles/About.css';
 
 export default function About() {
   const ref = useRef(null);

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import '../styles/Contact.css';
+import '../Styles/Contact.css';
 
 export default function Contact() {
   const ref = useRef(null);

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import '../styles/Work.css';
+import '../Styles/Work.css';
 
 const projects = [
   {
