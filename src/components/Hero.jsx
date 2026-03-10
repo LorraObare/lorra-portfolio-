@@ -39,7 +39,7 @@ export default function Hero() {
           </h1>
 
           <p className="hero__sub">
-            I'm <strong>Lorra Obare</strong> — an IT graduate and digital professional
+            I'm <strong>Laura Obare</strong> — an IT graduate and digital professional
             with a passion for frontend development, systems thinking, and African
             creativity. I build experiences that are thoughtful, functional, and made to last.
           </p>
