@@ -1,18 +1,19 @@
-# React + Vite
+<h1>About This Project</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p>This is my personal portfolio website,hand-coded React application that represents who I am as a digital professional.Every layout, animation, and interaction was designed and built from scratch to reflect my values.</p>
 
-Currently, two official plugins are available:
+<p>The site showcases my work across frontend development,digital operations, and tech training built for the Africa of tomorrow.</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h2>Featured Work</h2>
 
-## React Compiler
+<h2>Gemasu — Website Case Study 2025 Frontend Development </h2>
+<p>Full website from case study to deployment using HTML, CSS, JavaScript and React. Focus on usability, responsiveness, and content clarity.</p>
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+<h2>Document Management System — NTSA 2025</h2>
+<p>Improved an internal DMS at the National Transport and Safety Authority workflow bottlenecks, data accuracy, and system visibility.</p>
 
-Note: This will impact Vite dev & build performances.
+<h2>Visitor Management System — NTSA 2025 Digital Operations</h2>
+<p>Data capture, QA testing, and operational efficiency at entry points  supporting a more accurate and professional visitor experience.</p>
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<h2>College Algebra & Statistics Grading — ALX Africa 2025 Teaching & Community</h2>
+<p>Structured feedback to learners across Africa, supporting confidence and consistency in challenging technical material.</p>
