@@ -1,0 +1,139 @@
+.testimonials {
+  background: var(--cream-light);
+  position: relative;
+}
+
+.testi__header {
+  margin-bottom: 56px;
+}
+
+.testi__header h2 em {
+  font-style: italic;
+  color: var(--forest-mid);
+}
+
+.testi__content {
+  max-width: 720px;
+  position: relative;
+  min-height: 260px;
+}
+
+.testi-card {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s var(--ease-out);
+  pointer-events: none;
+}
+
+.testi-card.active {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+  position: relative;
+}
+
+.testi-quote-mark {
+  font-family: var(--font-display);
+  font-size: 6rem;
+  line-height: 0.7;
+  color: var(--gold);
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.testi-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--charcoal);
+  line-height: 1.7;
+  margin-bottom: 32px;
+  border: none;
+  padding: 0;
+}
+
+.testi-author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.testi-avatar {
+  width: 48px;
+  height: 48px;
+  background: var(--forest);
+  color: var(--cream-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 400;
+  flex-shrink: 0;
+}
+
+.testi-author strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--charcoal);
+}
+
+.testi-author span {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.testi-dots {
+  display: flex;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--cream-dark);
+  cursor: pointer;
+  transition: all var(--dur-med) var(--ease-out);
+  padding: 0;
+}
+
+.dot.active {
+  background: var(--forest);
+  width: 24px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .testi__header { margin-bottom: 36px; }
+  .testi__content {
+    max-width: 100%;
+    min-height: 300px;
+  }
+  .testi-text {
+    font-size: clamp(1rem, 4vw, 1.25rem);
+    margin-bottom: 24px;
+  }
+  .testi-quote-mark { font-size: 4rem; margin-bottom: 12px; }
+  .testi-dots { margin-top: 28px; }
+}
+
+@media (max-width: 480px) {
+  .testi__content { min-height: 340px; }
+  .testi-text { font-size: 1rem; line-height: 1.75; }
+  .testi-avatar { width: 40px; height: 40px; font-size: 0.85rem; }
+  .testi-author strong { font-size: 0.88rem; }
+  .testi-author span { font-size: 0.76rem; }
+  .testi-quote-mark { font-size: 3rem; }
+}
+
+@media (max-width: 360px) {
+  .testi__content { min-height: 380px; }
+}

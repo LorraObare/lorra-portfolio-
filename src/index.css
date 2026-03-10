@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  /* Palette — warm cream, deep forest, gold accent */
+  --cream:       #F5F0E8;
+  --cream-light: #FAF8F3;
+  --cream-dark:  #EDE6D6;
+  --forest:      #2C3E2D;
+  --forest-mid:  #3D5C3F;
+  --forest-light:#5A7D5C;
+  --gold:        #C9A84C;
+  --gold-light:  #E8C97A;
+  --sand:        #B8A88A;
+  --charcoal:    #1A1A1A;
+  --muted:       #7A6E60;
+
+  /* Typography */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'DM Sans', sans-serif;
+  --font-mono:    'Space Mono', monospace;
+
+  /* Spacing */
+  --nav-h: 72px;
+  --section-pad: clamp(80px, 10vw, 140px);
+  --container: 1200px;
+  --gutter: clamp(20px, 5vw, 60px);
+
+  /* Motion */
+  --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
+  --dur-fast:   200ms;
+  --dur-med:    400ms;
+  --dur-slow:   700ms;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--cream-light);
+  color: var(--charcoal);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── Scrollbar ───────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--forest-light); border-radius: 3px; }
+
+/* ── Selection ──────────────────────────────────────── */
+::selection { background: var(--gold-light); color: var(--charcoal); }
+
+/* ── Utility ────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: var(--section-pad);
+}
+
+/* ── Headings ──────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(3rem, 7vw, 6.5rem); }
+h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+h3 { font-size: clamp(1.3rem, 2.5vw, 1.9rem); }
+
+/* ── Links ──────────────────────────────────────────── */
+a { color: inherit; text-decoration: none; }
+
+/* ── Buttons ────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  transition: all var(--dur-med) var(--ease-out);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--forest);
+  color: var(--cream-light);
+}
+.btn-primary:hover {
+  background: var(--forest-mid);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(44,62,45,0.25);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--forest);
+  border: 1.5px solid var(--forest);
+}
+.btn-outline:hover {
+  background: var(--forest);
+  color: var(--cream-light);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--muted);
+  padding: 14px 0;
+  gap: 10px;
+}
+.btn-ghost:hover { color: var(--charcoal); }
+.btn-ghost .arrow { transition: transform var(--dur-fast) var(--ease-out); }
+.btn-ghost:hover .arrow { transform: translateX(5px); }
+
+/* ── Label / eyebrow ────────────────────────────────── */
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ── Reveal animation ───────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity var(--dur-slow) var(--ease-out),
+              transform var(--dur-slow) var(--ease-out);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+.reveal.d1 { transition-delay: 100ms; }
+.reveal.d2 { transition-delay: 200ms; }
+.reveal.d3 { transition-delay: 300ms; }
+.reveal.d4 { transition-delay: 400ms; }
+.reveal.d5 { transition-delay: 500ms; }
+
+/* ── Divider ────────────────────────────────────────── */
+.divider {
+  width: 48px;
+  height: 2px;
+  background: var(--gold);
+  margin-block: 20px;
+}
+
+/* ── Noise texture overlay ──────────────────────────── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  :root {
+    --section-pad: 64px;
+    --gutter: 20px;
+    --nav-h: 64px;
+  }
+  h1 { font-size: clamp(2.2rem, 9vw, 3.2rem); }
+  h2 { font-size: clamp(1.8rem, 7vw, 2.6rem); }
+  h3 { font-size: clamp(1.15rem, 5vw, 1.5rem); }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-pad: 48px;
+    --gutter: 16px;
+  }
+  h1 { font-size: clamp(2rem, 10vw, 2.8rem); }
+  h2 { font-size: clamp(1.6rem, 8vw, 2.2rem); }
+
+  .btn {
+    padding: 12px 22px;
+    font-size: 0.78rem;
+  }
+}

@@ -1,0 +1,212 @@
+.about {
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before {
+  content: 'ABOUT';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  font-family: var(--font-display);
+  font-size: 9rem;
+  font-weight: 300;
+  color: rgba(44,62,45,0.04);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.about__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Visual */
+.about__visual {
+  display: flex;
+  justify-content: center;
+}
+
+.about__img-frame {
+  position: relative;
+  width: 340px;
+  height: 420px;
+}
+
+.about__img-bg {
+  position: absolute;
+  inset: 16px -16px -16px 16px;
+  background: var(--forest-light);
+  border-radius: 4px;
+  opacity: 0.25;
+}
+
+.about__img-portrait {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, var(--forest) 0%, var(--forest-mid) 100%);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.about__img-portrait img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.about__img-portrait::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.25));
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Fallback initials */
+.about__portrait-fallback {
+  font-family: var(--font-display);
+  font-size: 5rem;
+  font-weight: 300;
+  color: rgba(245,240,232,0.3);
+  position: relative;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.about__img-portrait img + .about__portrait-fallback {
+  display: none;
+}
+
+.about__img-portrait[data-fallback="true"] .about__portrait-fallback {
+  display: block;
+}
+
+.about__tag {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  background: var(--cream-light);
+  padding: 10px 16px;
+  border: 1px solid var(--cream-dark);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* Content */
+.about__content {
+  padding-block: 20px;
+}
+
+.about__content h2 {
+  color: var(--charcoal);
+  margin-bottom: 24px;
+}
+
+.about__content h2 em {
+  font-style: italic;
+  color: var(--forest-mid);
+}
+
+.about__text {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+.about__facts {
+  margin-block: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-top: 1px solid var(--cream-dark);
+  padding-top: 24px;
+}
+
+.fact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.fact-icon {
+  font-size: 1.1rem;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.fact-label {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-family: var(--font-mono);
+  margin-bottom: 2px;
+}
+
+.fact-val {
+  font-size: 0.92rem;
+  color: var(--charcoal);
+  font-weight: 400;
+}
+
+.about__actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+  .about__visual { order: -1; }
+  .about__img-frame { width: 240px; height: 300px; margin-inline: auto; }
+  .about__img-bg { inset: 12px -12px -12px 12px; }
+  .about__tag { right: -12px; bottom: -12px; }
+  .fact-row { justify-content: center; text-align: left; }
+  .about__actions { justify-content: center; }
+  .divider { margin-inline: auto; }
+  .about__content h2 { text-align: center; }
+}
+
+@media (max-width: 600px) {
+  .about__img-frame { width: 200px; height: 250px; }
+  .about__img-bg { display: none; }
+  .about__tag { right: -8px; bottom: -8px; padding: 8px 12px; }
+  .about__facts { gap: 12px; }
+  .about__actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+  .about__actions .btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .about__img-frame { width: 170px; height: 210px; }
+}
